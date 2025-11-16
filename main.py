@@ -5,11 +5,11 @@ import tempfile
 import os
 
 
-@register("astrbot_sjyy", "知鱼", "随机一首音乐", "1.0")
+@register("zhiyu-astrbot-sjyy", "知鱼", "一款随机音乐的AstrBot插件", "1.0")
 class MyPlugin(Star):
     def __init__(self, context: Context):
         super().__init__(context)
-        self.api_url = "http://api.ocoa.cn/api/sjyy.php?type=voice"
+        self.api_url = "http://api.ocoa.cn/api/sjyy.php?type=audio"
 
     @filter.regex(r".*随机音乐.*")
     async def wsde_handler(self, message: AstrMessageEvent):
